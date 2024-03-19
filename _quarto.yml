@@ -32,7 +32,7 @@ website:
       #   - slides/vcadavez.qmd
       #   - slides/mzanzan.qmd
       #   - slides/ubarron.qmd
-      # - href: https://github.com/vcadavez/esafefoodsworkshop/discussions
+      # - href: https://github.com/fsqanalytics/esafefoods-challenge-tests
       #   text: Forum
   page-footer:
     border: true
@@ -41,7 +41,7 @@ website:
     center: "![](/images/logo.png){width=100}"
     right:
       - icon: github
-        href: https://github.com/fsqanalytics/esafefoods-challenge-tests/
+        href: https://github.com/fsqanalytics/esafefoods-challenge-tests
 
 format:
   html:
