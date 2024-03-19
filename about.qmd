@@ -1,0 +1,25 @@
+---
+title: "e-SafeFoods Workshop"
+toc: false
+page-layout: full
+---
+
+----------------------------------
+![](images/banner.jpg)
+---------------------------
+
+
+## AIM OF THE WORKSHOP
+
+At the end of the workshop, the participant will have notions of:
+
+1. the **modelling of microbiological challenge test data**, and the **importance of validation**;
+
+2. how to **exploit microbial kinetic parameters** obtained from predictive microbiology models in the **validation of a process** and, ultimately, in the **assessment of exposure** to foodborne pathogens.
+
+
+## AUDIENCE
+
+The intended audience for this workshop includes **Master/PhD students**, **researchers** and **academic staff** who have an interest in the analysis and exploitability of data obtained from microbiological challenge tests.
+
+**Maximum participants**: The face-to-face workshop accommodates a maximum of 40 trainees in order to maintain interactive work and discussion.

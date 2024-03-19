@@ -1,0 +1,63 @@
+---
+title: "e-SafeFoods Workshop"
+toc: false
+page-layout: full
+---
+
+![](images/banner.jpg)
+---------------------
+
+## Schedule
+
+### **$30^{th}$ April 2024**
+
+| Hour              | Title                                                        | Trainer            |
+|:------------------|:-------------------------------------------------------------|:-------------------|
+| **09:30 - 10:40** | Statistical examination of challenge test data and modelling | Vasco Cadavez      |
+| **10:40 - 11:20** | Exploitation of challenge testing in process validation      | Mariem Zanzan      |
+| **11:20 - 11:35** | Coffee break                                                 |                    |
+| **11:35 - 12:30** | Exploitation of challenge testing in exposure assessment of foodborne pathogens  | Ursula Gonzales-Barron |
+
+
+## Tutors
+
+::::: {.columns style='display: flex !important; height: 90%;'}
+
+::: {.column width="50%" .v-center-container}
+
+![](./images/barron.png){width=150}
+
+**Dr. Ursula Gonzales-Barron**
+
+Food Engineer
+
+Computational approaches in food safety,
+IPB, Portugal
+
+:::
+
+::: {.column}
+
+![](./images/mariem.png){width=150}
+
+**Dr. Mariem Zanzan**
+
+Microbiologist
+
+Food bio-preservation,
+IPB, Portugal
+:::
+
+::: {.column}
+
+![](./images/cadavez.png){width=150}
+
+**Dr. Vasco Cadavez**
+
+Animal Scientist
+
+Computational approaches in food safety,
+IPB, Portugal
+:::
+
+::::

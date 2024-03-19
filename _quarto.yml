@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  back-to-top-navigation: true
+  title: "esafefoods-challenge-tests"
+  sidebar:
+    background: primary
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/vcadavez/esafefoods-challenge-tests
+        text: GitHub
+    style: docked
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: schedule.qmd
+        text: Schedule
+      - href: location.qmd
+        text: "Course location"
+      - href: registration.qmd
+        text: Registration
+      # - section: "Materials"
+      #   contents:
+      #   - slides/vcadavez.qmd
+      #   - slides/mzanzan.qmd
+      #   - slides/ubarron.qmd
+      # - href: https://github.com/vcadavez/esafefoodsworkshop/discussions
+      #   text: Forum
+  page-footer:
+    border: true
+    background: "#e84220"
+    left: "Copyright 2024 &copy; e-Safefood"
+    center: "![](/images/logo.png){width=100}"
+    right:
+      - icon: github
+        href: https://github.com/vcadavez/esafefoods-challenge-tests/
+
+format:
+  html:
+    theme: united
+    css: styles.css
+    toc: true
+
+execute:
+  freeze: auto
+
