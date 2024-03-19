@@ -7,7 +7,9 @@ page-layout: full
 ![](images/banner.jpg)
 ---------------------
 
-## Schedule
+<br>
+
+## SCHEDULE
 
 ### **$30^{th}$ April 2024**
 
@@ -19,7 +21,7 @@ page-layout: full
 | **11:35 - 12:30** | Exploitation of challenge testing in exposure assessment of foodborne pathogens  | Ursula Gonzales-Barron |
 
 
-## Tutors
+## TUTORS
 
 ::::: {.columns style='display: flex !important; height: 90%;'}
 
@@ -56,7 +58,7 @@ IPB, Portugal
 
 Animal Scientist
 
-Computational approaches in food safety,
+Data science in food safety,
 IPB, Portugal
 :::
 

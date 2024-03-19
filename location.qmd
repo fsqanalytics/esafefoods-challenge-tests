@@ -7,18 +7,18 @@ page-layout: full
 ![](images/banner.jpg)
 ---------------------
 
-## Course location
+<br>
+
+## COURSE LOCATION
 
 The Workshop will take place in the Polytechnic Institute of Bragança
 
-### Venue
+### VENUE
 
 - School of Agriculture
   - **Polytechnic Institute of Bragança (IPB)**, Campus de Santa Apolónia, 5300-253 Bragança, Portugal
  
-## How to get there?
-
-- The **Francisco Sá Carneiro** in Porto (OPO) **airport** is the nearest International airport.
+## HOW TO GET THERE?
 
 - The following **bus companies** travel **Porto - Bragança - Porto**.
 

@@ -8,7 +8,9 @@ page-layout: full
 ![](images/banner.jpg)
 ---------------------
 
-## Registration
+<br> 
+
+## REGISTRATION
 
 - The workshop is **free-of-charge**, but it has a **maximum** number of participants of **40**.
 
