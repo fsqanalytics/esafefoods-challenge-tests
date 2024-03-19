@@ -19,3 +19,8 @@ page-layout: full
 - Registration is done by completing the [registration form](https://forms.office.com/e/1cBraN5SLw).
 
 - For further information, e-mail Ursula Gonzales-Barron: **ubarron@ipb.pt**
+
+## IMPORTANT
+
+- In case of non-attendance, please cancel registration at the earliest by sending an email to **ubarron@ipb.pt**
+
