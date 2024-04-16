@@ -9,7 +9,7 @@ page-layout: full
 | ![](images/banner.jpg) |
 
 ___________________________
-# VIRTUAL ATTENDANCE HAS BEEN OPENED
+## [VIRTUAL ATTENDANCE HAS BEEN OPENED]{style="color:red"}
 __________________________
 
 <br>
