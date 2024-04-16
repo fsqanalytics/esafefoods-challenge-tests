@@ -1,0 +1,8 @@
+---
+title: "Exploitation of challenge testing in exposure assessment of foodborne pathogens"
+subtitle: "e-Safefoods"
+format: revealjs
+editor: visual
+---
+
+## Teste

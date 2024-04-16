@@ -1,0 +1,8 @@
+---
+title: "Exploitation of challenge testing in process validation"
+subtitle: "e-Safefoods"
+format: revealjs
+editor: visual
+---
+
+## Introduction

@@ -1,0 +1,10 @@
+---
+title: "Statistical examination of challenge test data and modelling"
+subtitle: "e-Safefoods"
+author: Vasco Cadavez
+institute: Instituto Politécnico de Bragança
+format: revealjs
+editor: source
+---
+
+## Introduction

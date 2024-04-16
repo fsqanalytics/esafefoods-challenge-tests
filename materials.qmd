@@ -1,0 +1,13 @@
+---
+title: "Course Materials"
+---
+
+----------------------
+![](images/banner.jpg)
+---------------------
+
+
+[Datasets](data/)
+
+[Slides](slides/)
+
