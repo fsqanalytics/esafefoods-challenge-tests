@@ -6,8 +6,92 @@ title: "Course Materials"
 ![](images/banner.jpg)
 ---------------------
 
+```{r xfun, echo=FALSE, warning=FALSE}
+library(xfun)
+```
 
-[Datasets](data/)
 
-[Slides](slides/)
+## Statistical examination of challenge test data and modelling
+
+### `Slides`
+
+```{r intro, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit1-ChallengeTestsDataAnalysisIntroduction.html')
+```
+
+```{r pgm, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit1-ChallengeTestsDataAnalysisPGM.html')
+```
+
+```{r sgm, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit1-ChallengeTestsDataAnalysisSGM.html')
+```
+
+### `Datasets`
+
+```{r ecoli, echo=FALSE, warning=FALSE}
+xfun::embed_file('./data/ecoli.csv')
+```
+
+```{r lis, echo=FALSE, warning=FALSE}
+xfun::embed_file('./data/listeria.csv')
+```
+
+```{r grfull, echo=FALSE, warning=FALSE}
+xfun::embed_file('./data/GrowthFull.csv')
+```
+
+```{r grtemp, echo=FALSE, warning=FALSE}
+xfun::embed_file('./data/temp.csv')
+```
+
+
+### `Scripts`
+
+```{r pgmscript, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit1-ChallengeTestsDataAnalysisPGM.R')
+```
+
+```{r sgmscript, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit1-ChallengeTestsDataAnalysisSGM.R')
+```
+
+
+## Exploitation of challenge testing in process validation
+
+### `Slides`
+
+```{r zan, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit2-ChallengeTestsThermalProcessValidation.pdf')
+```
+
+### `Datasets`
+
+```{r smoking, echo=FALSE, warning=FALSE}
+xfun::embed_file('./data/Unit3-ExampleValidationSmoking.xls')
+```
+
+
+
+## Exploitation of challenge testing in exposure assessment of foodborne pathogens
+
+### `Slides`
+
+```{r ubar, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/Unit3-ChallengeTestsQRA.pdf')
+```
+
+### `Scripts`
+
+```{r baseline, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/stirFry_Baseline.R')
+```
+
+```{r mid, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/stirFry_MildHeat.R')
+```
+
+```{r stir, echo=FALSE, warning=FALSE}
+xfun::embed_file('./files/stirFry_Storage.R')
+```
 

@@ -4,7 +4,7 @@
     "href": "registration.html#registration",
     "title": "e-SafeFoods Workshop",
     "section": "REGISTRATION",
-    "text": "REGISTRATION\n\nThe workshop is free-of-charge, but it has a maximum number of participants of 40.\nCertificates will be provided to participants.\nRegistration is done by completing the registration form.\nFor further information, e-mail Ursula Gonzales-Barron: ubarron@ipb.pt",
+    "text": "REGISTRATION\n\nThe workshop is free-of-charge, but it has a maximum number of participants of 40.\nCertificates will be provided to participants.\n\n\n\nFor further information, e-mail Ursula Gonzales-Barron: ubarron@ipb.pt",
     "crumbs": [
       "Registration"
     ]
@@ -40,11 +40,11 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#registration-is-closed",
+    "href": "index.html#registration-is-closed",
     "title": "e-SafeFoods Workshop",
-    "section": "",
-    "text": "The Workshop Making the Most of Microbiological Challenge Test Data will take place on the \\(30^{th}\\) April 2024 at the Polytechnic Institute of Bragança (Portugal). The Workshop is organised as a training event within the Erasmus+ Programme e-SafeFood project, whose main objective is to develop online training programmes on microbiological food risks with a strong practical component and certified at European level.\nMaking the Most of Microbiological Challenge Test Data is a free-of-charge face-to-face three-hour workshop, but registration is required.",
+    "section": "REGISTRATION IS CLOSED",
+    "text": "REGISTRATION IS CLOSED\n\n\nThe Workshop Making the Most of Microbiological Challenge Test Data will take place in two modalities: physical attendance and virtual participation via ZOOM, on the \\(30^{th}\\) April 2024. The Workshop location is the School of Agriculture of the Polytechnic Institute of Bragança (Portugal), and is organised as a training event within the Erasmus+ Programme e-SafeFood project, whose main objective is to develop online training programmes on microbiological food risks with a strong practical component and certified at European level.\nMaking the Most of Microbiological Challenge Test Data is a free-of-charge three-hour workshop, but registration is required. Participants must indicate their participation modality.",
     "crumbs": [
       "Home"
     ]
@@ -60,32 +60,380 @@
     ]
   },
   {
-    "objectID": "slides/ubarron.html#teste",
-    "href": "slides/ubarron.html#teste",
-    "title": "Exploitation of challenge testing in exposure assessment of foodborne pathogens",
-    "section": "Teste",
-    "text": "Teste"
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#class-summary",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#class-summary",
+    "title": "Introduction",
+    "section": "Class summary",
+    "text": "Class summary\n\nYou will learn:\n\nThe goals of predictive microbiology\nThe models classification\nThe definition of challenge test\nHow to carry out a challenge test\nHow to check a data set from challenge tests using R software\nHow to fit a primary model using R software\nHow to fit a secondary model using R software\n\nMaterials needed:\n\nThis presentation\nTwo R scripts\n\nUnit1-ChallengeTestsDataAnalysisPGM.R\nUnit1-ChallengeTestsDataAnalysisSGM.R\n\nThe accompanying videos\n\n\n\nSpeaker notes go here."
   },
   {
-    "objectID": "slides/mzanzan.html#introduction",
-    "href": "slides/mzanzan.html#introduction",
-    "title": "Exploitation of challenge testing in process validation",
-    "section": "Introduction",
-    "text": "Introduction"
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#predictive-microbiology-objectives",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#predictive-microbiology-objectives",
+    "title": "Introduction",
+    "section": "Predictive microbiology objectives",
+    "text": "Predictive microbiology objectives\n\n\n\nAims the description of the responses of microorganism's to particular environmental conditions, such as:\n\nTemperature\npH\nOrganic acids\nWater activity\n\nBased on mathematical models developed using data collected at laboratory level\nSoftware is used to fit the models to experimental data in order to characterize the microbes responses\n\n\n\n\n\n\n\nTemperature: storage conditions and heat-treatment\npH: fermentations\nOrganic acids: preservatives (e.g. nitrite in pork meat)\nWater activity: bakery products"
   },
   {
-    "objectID": "slides/vcadavez.html#introduction",
-    "href": "slides/vcadavez.html#introduction",
-    "title": "Statistical examination of challenge test data and modelling",
-    "section": "Introduction",
-    "text": "Introduction"
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#primary-models",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#primary-models",
+    "title": "Introduction",
+    "section": "Primary models",
+    "text": "Primary models\n\n\n\nDescribe the microbial behaviour as a function of time\n\nGrowth\nInactivation\nSurvival\n\nFit models to experimental data to estimate the kinetic parameters\n\n\\(\\lambda\\): lag phase duration\n\\(k\\): Maximum growth rate, or\n\\(\\mu\\): Specific growth rate\n\\(M\\): Maximum population density"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#secondary-models",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#secondary-models",
+    "title": "Introduction",
+    "section": "Secondary models",
+    "text": "Secondary models\n\n\n\nDescribe the kinetic parameters as a function of environmental conditions\n\nTemperature\npH\nWater activity"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models",
+    "title": "Introduction",
+    "section": "Tertiary models",
+    "text": "Tertiary models\n\nPrimary and secondary models are integrated in software tools\nUsed by\n\nfood safety assessors\nR&D managers\nQuality managers"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models-1",
+    "title": "Introduction",
+    "section": "Tertiary models",
+    "text": "Tertiary models\nExamples: https://fsqanalytics.github.io/predmicror/\n\n\npredmicror package from IPB Mos commonly used models for predictive microbiology"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models-2",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models-2",
+    "title": "Introduction",
+    "section": "Tertiary models",
+    "text": "Tertiary models\nExamples: https://www.uco.es/investiga/grupos/hibro/en/microhibro\n\n\nMicroHibro Spanish software from Cordoba University"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models-3",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#tertiary-models-3",
+    "title": "Introduction",
+    "section": "Tertiary models",
+    "text": "Tertiary models\nExamples: https://symprevius.eu/en/\n\n\nFrench software - Sym’Previus is a collaborative project"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#objectives",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#objectives",
+    "title": "Introduction",
+    "section": "Objectives",
+    "text": "Objectives\n\nStudy the microbial growth potential\n\nWe assess whether or not the food favours the growth of microorganisms\nCompromise the consumer health\nAccelerate food spoilage\n\nProcesses validation by studying the degree of lethality against a target organism or group of target organisms.\nUseful to determine the potential shelf life of foods.\nThe food industry use challenge tests to improve the safety and quality of its products.\n\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test",
+    "title": "Introduction",
+    "section": "How to carry out a challenge test?",
+    "text": "How to carry out a challenge test?\n\nFood is contaminated and analysed in the environmental conditions in which it is normally produced, distributed, stored and marketed\nInoculation should be carried out at the most critical stages of processing\nWe can't carry out these tests on production lines\nSo we need laboratorial experiments\n\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test-1",
+    "title": "Introduction",
+    "section": "How to carry out a challenge test?",
+    "text": "How to carry out a challenge test?\nExamples\n\n\nListeria in beef"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test-2",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test-2",
+    "title": "Introduction",
+    "section": "How to carry out a challenge test?",
+    "text": "How to carry out a challenge test?\nExamples\n\n\nS. aureus in cheese"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test-3",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#how-to-carry-out-a-challenge-test-3",
+    "title": "Introduction",
+    "section": "How to carry out a challenge test?",
+    "text": "How to carry out a challenge test?\nExamples\n\n\nS. aureus in cheese"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#references",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisIntroduction.html#references",
+    "title": "Introduction",
+    "section": "References",
+    "text": "References\n\n\nBaranyi, J, PJ McClure, JP Sutherland, and TA Roberts. 1993. “Modeling Bacterial Growth Responses.” Journal of Industrial Microbiology 12 (3-5): 190–94.\n\n\nGonzales-Barron, Ursula, and Vasco Cadavez. 2019. Handbook of Predictive Microbiology Growth Models Using R. Edited by Ursula Gonzales-Barron and Vasco Cadavez. Bragança, Portugal: Bringráfica Indústrias Gráficas, LDA.\n\n\nISO20976-1:2019. 2019. Microbiology of the Food Chain Requirements and Guidelines for Conducting Challenge Tests of Food and Feed Products Part 1: Challenge Tests to Study Growth Potential, Lag Time and Maximum Growth Rate.\n\n\nISO20976-2:2019. 2019. Microbiology of the Food Chain Requirements and Guidelines for Conducting Challenge Tests of Food and Feed Products Part 2: Challenge Tests to Study Inactivation Potential and Kinetic Parameters.\n\n\nMcMeekin, T. A., J. Olley, T. Ross, and D. A. Ratkowsky. 1993. Predictive Microbiology: Theory and Application. Taunton, UK: Research Studies Press.\n\n\nWhiting, R. C., and R. L. Buchanan. 1993. “A Classification of Models for Predictive Microbiology.” Food Microbiology 10: 175–77.\n\n\nZwietering, M. H., I. Jongenburger, F. M. Rombouts, and K. van’t Riet. 1990. “Modeling of the Bacterial Growth Curve.” Applied and Environmental Microbiology 56 (6): 1875–81."
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#objectives",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#objectives",
+    "title": "Fitting Primary Growth Models",
+    "section": "Objectives",
+    "text": "Objectives\n\nYou will learn how to:\n\nImport a .csv file to R software\nCheck a challenge test data set\n\nSelect an adequate primary growth model\nFit a primary growth model to\nExamine the fitting results\nObtain the confidence and prediction intervals\n\nMaterials needed:\n\nThis presentation\nThe R script: Unit1-ChallengeTestsDataAnalysisPGM.R\nThe accompanying video\n\n\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#challege-test-data",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#challege-test-data",
+    "title": "Fitting Primary Growth Models",
+    "section": "Challege test data",
+    "text": "Challege test data\n\nGrowth data example\n\nE. coli challenge test\n\ndata set: ecoli.csv\nExperiments were carried out at 30 and 35 \\(^o\\)C\nTwo batches/repetitions per condition\n\n\nFirst, we load the data set using the read.csv() function\n\n\ndf &lt;- read.csv(\"../data/ecoli.csv\", sep=\";\", header=TRUE)\n\n\nLets check the first lines of the file, for that use the head() function\n\n\nhead(df)\n\n  Condition Repetition Time Temp   lnN\n1         1          1    0   30  5.93\n2         1          1    3   30  5.82\n3         1          1    5   30  6.04\n4         1          1    7   30  7.45\n5         1          1    9   30 10.38\n6         1          1   11   30 12.06\n\n\n\nCondition is this case is temperature at which trials were conducted"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#challege-test-data-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#challege-test-data-1",
+    "title": "Fitting Primary Growth Models",
+    "section": "Challege test data",
+    "text": "Challege test data\n\nCheck the structure of the data set using the str() function\nWe can always make sure that we have the right data set\n\n\nstr(df)\n\n\nThe data set has 42 observations (lines) and 5 variables(columns)\n\n\n\n'data.frame':   42 obs. of  5 variables:\n $ Condition : int  1 1 1 1 1 1 1 1 1 1 ...\n $ Repetition: int  1 1 1 1 1 1 1 1 1 1 ...\n $ Time      : num  0 3 5 7 9 11 13 15 16 20 ...\n $ Temp      : int  30 30 30 30 30 30 30 30 30 30 ...\n $ lnN       : num  5.93 5.82 6.04 7.45 10.38 ...\n\n\n\nVariables type: - int - num"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-the-data-structure",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-the-data-structure",
+    "title": "Fitting Primary Growth Models",
+    "section": "Check the data structure",
+    "text": "Check the data structure\n\nCheck the levels of the variables: Condition and Temp\nUse the table() function\n\nCondition\n\n\n\n 1  2 \n22 20 \n\n\nTemperature\n\n\n\n30 35 \n22 20 \n\n\nInteraction Condition/Temp\n\n\n   \n    30 35\n  1 22  0\n  2  0 20\n\n\n\nCondition and temperature are the same! Because we just have one factor: Temperature"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-the-data-shape",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-the-data-shape",
+    "title": "Fitting Primary Growth Models",
+    "section": "Check the data shape",
+    "text": "Check the data shape\n\nPlot lnN against Time\n\n\nlibrary(ggplot2)\nggplot(data = df, aes(x=Time, y=lnN, group=factor(Temp), colour=factor(Temp))) +\n  geom_point()\n\n\nlnN is the bacterial counts in natural logarithm scale"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-the-data-shape-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-the-data-shape-1",
+    "title": "Fitting Primary Growth Models",
+    "section": "Check the data shape",
+    "text": "Check the data shape\n\n\nThe E. coli population (lnN) increases along Time\nClearly, the lnN shows a non-linear (sigmoidal) relationship with Time"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#primary-growth-models-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#primary-growth-models-1",
+    "title": "Fitting Primary Growth Models",
+    "section": "Primary growth models",
+    "text": "Primary growth models\n\nDescribe the microorganisms responses to the food environments\nWe can predict the growth behaviour of the microorganisms for specific environmental conditions, such as: pH, salt content, temperature, etc.\nPrimary growth models are characterised by the kinetic growth parameters\n\n\\(\\lambda\\): lag phase duration\n\\(k\\): Maximum growth rate, or\n\\(\\mu\\): Specific growth rate\n\\(M\\): Maximum population density\n\n\n\n\nThese parameters are essential to predict growth behaviour"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#primary-growth-models-2",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#primary-growth-models-2",
+    "title": "Fitting Primary Growth Models",
+    "section": "Primary growth models",
+    "text": "Primary growth models\n\nSeveral primary growth models have been developed and tested for predictive microbiology applications\n\nBaranyi: https://fsqanalytics.github.io/predmicror/reference/BaranyiFM.html\nHuang: https://fsqanalytics.github.io/predmicror/reference/HuangFM.html\nRosso: https://fsqanalytics.github.io/predmicror/reference/RossoFM.html\n\n\n\npredmicror package is a collection of functions used in predictive microbiology - full growth models - no-lag growth models"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#software",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#software",
+    "title": "Fitting Primary Growth Models",
+    "section": "Software",
+    "text": "Software\n\nWe use the R software\n\nIts free\nDeveloped for statistical analysis and plots\nFunctions to fit non-linear models to experimental data\n\nnls() function from the```stats package\ngsl_nls() from gslnls package (GNU Scientific Library)\nOthers\n\n\nDownload and install the R software: https://cran.r-project.org/\nInstall the predmicror package: https://fsqanalytics.github.io/predmicror/\n\n\ndevtools::install_github(\"fsqanalytics/predmicror\")"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#selected-model-huang-full-model",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#selected-model-huang-full-model",
+    "title": "Fitting Primary Growth Models",
+    "section": "Selected model: Huang full model",
+    "text": "Selected model: Huang full model\n\nThe Huang full growth model might be a good option to describe the sigmoidal shape of the data\n\nhttps://fsqanalytics.github.io/predmicror/reference/HuangFM.html\n\nModel equation\n\n\\[Y = Y_0 +Y_{max} -log \\left( e^{Y_0}+(e^{Y_{max}}-e^{Y_0}) \\times e^{-mu \\times B} \\right)\\]"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#starting-values",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#starting-values",
+    "title": "Fitting Primary Growth Models",
+    "section": "Starting values",
+    "text": "Starting values\n\nTo fit non-linear models we need to we need to supply starting values for the model parameters\nSo, lets start by defining the starting values\n\n\nstart.values = list(Y0=0.0, Ymax=22.0, MUmax=1.7, lag=5.0)"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#fit-using-gsl_nls-function",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#fit-using-gsl_nls-function",
+    "title": "Fitting Primary Growth Models",
+    "section": "Fit using gsl_nls() function",
+    "text": "Fit using gsl_nls() function\n\nNow we can fit the Huang model to the experimental data\nLets start with data from the Condition 1 & Repetition 1\n\n\nlibrary(predmicror)\nlibrary(gslnls)\nfit &lt;- gsl_nls(lnN ~ HuangFM(Time, Y0, Ymax, MUmax, lag),\n               data=df[df$Condition==1 & df$Repetition==1, ],\n               start =  start.values\n               )\nfit\n\nNonlinear regression model\n  model: lnN ~ HuangFM(Time, Y0, Ymax, MUmax, lag)\n   data: df[df$Condition == 1 & df$Repetition == 1, ]\n    Y0   Ymax  MUmax    lag \n 5.918 18.840  1.182  5.584 \n residual sum-of-squares: 0.4724\n\nAlgorithm: multifit/levenberg-marquardt, (scaling: more, solver: qr)\n\nNumber of iterations to convergence: 5 \nAchieved convergence tolerance: 8.214e-11"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-fitting-results",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#check-fitting-results",
+    "title": "Fitting Primary Growth Models",
+    "section": "Check fitting results",
+    "text": "Check fitting results\n\nThe fitting was successful!\nFor a detailed summary of the model fit we can use the summary() function\n\n\nsummary(fit)\n\n\nFormula: lnN ~ HuangFM(Time, Y0, Ymax, MUmax, lag)\n\nParameters:\n      Estimate Std. Error t value Pr(&gt;|t|)    \nY0     5.91795    0.15454   38.29 2.15e-09 ***\nYmax  18.83981    0.18286  103.03 2.14e-12 ***\nMUmax  1.18173    0.03892   30.36 1.09e-08 ***\nlag    5.58393    0.25000   22.34 9.12e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2598 on 7 degrees of freedom\n\nNumber of iterations to convergence: 5 \nAchieved convergence tolerance: 8.214e-11"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#parameters-confidence-intervals",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#parameters-confidence-intervals",
+    "title": "Fitting Primary Growth Models",
+    "section": "Parameters confidence intervals",
+    "text": "Parameters confidence intervals\n\nExtract the confidence intervals of the parameters using the confint() function\n\n\nconfint(fit)\n\n      2.5 %    97.5 %\n1  5.552527  6.283381\n2 18.407425 19.272192\n3  1.089686  1.273772\n4  4.992780  6.175070"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#plot-the-fitted-values",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#plot-the-fitted-values",
+    "title": "Fitting Primary Growth Models",
+    "section": "Plot the fitted values",
+    "text": "Plot the fitted values\n\nDefine a vector with auxiliary time data\n\n\nnew.times=seq(0,24, by=0.1)\n\n\nUse the predict() function to compute the prediction interval\n\n\nfits &lt;- predict(fit,\n                newdata = data.frame(Time=new.times),\n                interval = \"prediction\", level = 0.95)\nstr(fits)\n\n num [1:241, 1:3] 5.92 5.92 5.92 5.92 5.92 ...\n - attr(*, \"dimnames\")=List of 2\n  ..$ : NULL\n  ..$ : chr [1:3] \"fit\" \"lwr\" \"upr\"\n\n\n\nCheck the fits object\n\n\nhead(fits[, ])\n\n          fit      lwr      upr\n[1,] 5.917954 5.297986 6.537921\n[2,] 5.917954 5.297986 6.537921\n[3,] 5.917954 5.297986 6.537921\n[4,] 5.917954 5.297986 6.537921\n[5,] 5.917954 5.297986 6.537921\n[6,] 5.917954 5.297986 6.537921"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#plot-confidence-interval",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#plot-confidence-interval",
+    "title": "Fitting Primary Growth Models",
+    "section": "Plot confidence interval",
+    "text": "Plot confidence interval\n\nCreate a plot of the original data with the fitted values superimposed\nPlot the observed data using the plot() function\nUse the lines() function to add the confidence interval\n\n\nplot(lnN ~ Time, data=df[df$Condition==1 & df$Repetition==1, ], ylim=c(5,20))\nlines(new.times, fits[, 1], col=\"blue\")\nlines(new.times, fits[, 2], col=\"red\")\nlines(new.times, fits[, 3], col=\"red\")"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#to-start",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#to-start",
+    "title": "Fitting Primary Growth Models",
+    "section": "To start",
+    "text": "To start\nShiny app PredMicro: https://vcadavez.shinyapps.io/PredMicro/"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#references",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisPGM.html#references",
+    "title": "Fitting Primary Growth Models",
+    "section": "References",
+    "text": "References\n\n\nBaranyi, J, PJ McClure, JP Sutherland, and TA Roberts. 1993. “Modeling Bacterial Growth Responses.” Journal of Industrial Microbiology 12 (3-5): 190–94.\n\n\nBuchanan, R. L, R. C Whiting, and W. C Damert. 1997. “When Is Simple Good Enough: A Comparison of the Gompertz, Baranyi, and Three-Phase Linear Models for Fitting Bacterial Growth Curves.” Food Microbiology 14 (4): 313–26. https://doi.org/https://doi.org/10.1006/fmic.1997.0125.\n\n\nDolan, Kirk D., and Dharmendra K. Mishra. 2013. “Parameter Estimation in Food Science.” Annual Review of Food Science and Technology 4 (1): 401–22. https://doi.org/10.1146/annurev-food-022811-101247.\n\n\nGonzales-Barron, Ursula, and Vasco Cadavez. 2019. Handbook of Predictive Microbiology Growth Models Using R. Edited by Ursula Gonzales-Barron and Vasco Cadavez. Bragança, Portugal: Bringráfica Indústrias Gráficas, LDA.\n\n\nZwietering, M. H., I. Jongenburger, F. M. Rombouts, and K. van’t Riet. 1990. “Modeling of the Bacterial Growth Curve.” Applied and Environmental Microbiology 56 (6): 1875–81."
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#objectives",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#objectives",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Objectives",
+    "text": "Objectives\n\nYou will learn how to:\n\nImport a .csv file to R software\nCheck a data set\n\nSelect an adequate secondary model\nFit a secondary model\nExamine the fitting results\nObtain the confidence and prediction intervals\n\nMaterials needed:\n\nThis presentation\nThe R script: Unit1-ChallengeTestsDataAnalysisSGM.R\nThe accompanying video\n\n\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#data-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#data-1",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Data",
+    "text": "Data\n\nGrowth rate values of salmonella in broth\nThe listeria.csv file has three columns (Temp, GR sqrtGR) and 29 observations\n\nTemp is the temperature used to measure the growth rate\nGR is the growth rate\nsqrtGR is the square root of the growth rate\n\nLets read the listeria.csv with the read.csv() function and save it as data frame (df)\n\n\ndf &lt;- read.csv(\"../data/listeria.csv\", sep=\";\", header=TRUE)\nhead(df)\n\n  Temp      GR sqrtGR\n1  0.7 0.00000 0.0000\n2  3.4 0.00034 0.0185\n3  7.6 0.00127 0.0356\n4  9.6 0.00166 0.0407\n5 11.2 0.00230 0.0480\n6 12.8 0.00256 0.0506\n\n\n\nData were obtained by fitting a primary model to different isothermal experiments"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#data-2",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#data-2",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Data",
+    "text": "Data\n\nLets, check the dataset using the structure (str()) function\n\n\nstr(df)\n\n'data.frame':   28 obs. of  3 variables:\n $ Temp  : num  0.7 3.4 7.6 9.6 11.2 12.8 14.1 15.4 16.9 18.2 ...\n $ GR    : num  0 0.00034 0.00127 0.00166 0.0023 0.00256 0.00311 0.00423 0.00452 0.00587 ...\n $ sqrtGR: num  0 0.0185 0.0356 0.0407 0.048 0.0506 0.0558 0.065 0.0672 0.0766 ...\n\n\n\nWe confirm that the data set is composed of 3 variables (columns)\n\nTemp: temperature\nGR: growth rate\nsqrtGR: square root of the growth rate"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#check-the-data-shape",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#check-the-data-shape",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Check the data shape",
+    "text": "Check the data shape\n\nCheck the data by plotting the sqrtGR against Temperature\n\nWe can observe a non-linear relationship\n\n\n\n\n\nplot(GR ~ Temp, data=df,\n     xlab=\"Temperature (ºC)\", ylab=\"Growth rate\")\n\n\n\n\n\n\n\n\n\n\nplot(sqrtGR ~ Temp, data=df,\n     xlab=\"Temperature (ºC)\", ylab=\"Growth rate\")"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#secondary-models-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#secondary-models-1",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Secondary models",
+    "text": "Secondary models\n\nDescribe the influence of environmental factors on microbial growth rate\nCan be generally classified as:\n\nArrhenius-type models\nBelehradek-type models\nSquare-root models\nCardinal parameter models\n\nWhen adjusting a secondary model, using directly the untransformed growth rate response variable produces heterocedastic models\nTo obtain an adequate fitting, the growth rate values are often transformed by taking the natural logarithm or the square root\n\n\nnatural logarithm - in polynomial models\nsquare root - in Belehradek-type models"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#software",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#software",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Software",
+    "text": "Software\n\nWe use the R software\n\nIts free\nDeveloped for statistical analysis and plots\nFunctions to fit non-linear models to experimental data\n\nnls() function from the```stats package\ngsl_nls() from gslnls package (GNU Scientific Library)\nOthers\n\n\nDownload and install the R software: https://cran.r-project.org/\nInstall the predmicror package: https://fsqanalytics.github.io/predmicror/"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#software-1",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#software-1",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Software",
+    "text": "Software\n\nInstall the predmicror package from GitHub repository\n\n\ndevtools::install_github(\"fsqanalytics/predmicror\")\n\n\nLoad the predmicror package\n\n\nlibrary(predmicror)"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#selected-model-cardinal-model-for-temperature",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#selected-model-cardinal-model-for-temperature",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Selected model: Cardinal model for temperature",
+    "text": "Selected model: Cardinal model for temperature\n\nWe will use the Cardinal model for temperature implemented in the predmicror package\n\nhttps://fsqanalytics.github.io/predmicror/reference/CMTI.html\n\n\n\nlibrary(predmicror)\nCMTI\n\nfunction (x, Tmax, Tmin, MUopt, Topt) \n{\n    if (!requireNamespace(\"gslnls\", quietly = TRUE)) {\n        stop(\"Package \\\"gslnls\\\" must be installed to use this function.\", \n            call. = FALSE)\n    }\n    CMT &lt;- ifelse(x &lt;= Tmin | x &gt;= Tmax, 0, MUopt * (((x - Tmax) * \n        (x - Tmin)^2)/((Topt - Tmin) * ((Topt - Tmin) * (x - \n        Topt) - (Topt - Tmax) * (Topt + Tmin - 2 * x)))))\n    result &lt;- sqrt(CMT)\n    return(result)\n}\n&lt;bytecode: 0x57af77b9bab0&gt;\n&lt;environment: namespace:predmicror&gt;"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#starting-values",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#starting-values",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Starting values",
+    "text": "Starting values\n\nTo fit non-linear models we need to we need to supply starting values for the model parameters\nSo, lets start by defining the starting values\n\n\nstart.values = list(Tmax=47, Tmin=0.1, MUopt=0.020, Topt=37)"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#fit-using-gsl_nls-function",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#fit-using-gsl_nls-function",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Fit using gsl_nls() function",
+    "text": "Fit using gsl_nls() function\n\nNow we can fit the CMTI model to the experimental data\n\n\nlibrary(predmicror)\nlibrary(gslnls)\nfit &lt;- gsl_nls(sqrtGR ~ CMTI(Temp,Tmax,Tmin,MUopt,Topt),\n           data=df,\n           start =  start.values\n           )\nfit\n\nNonlinear regression model\n  model: sqrtGR ~ CMTI(Temp, Tmax, Tmin, MUopt, Topt)\n   data: df\n    Tmax     Tmin    MUopt     Topt \n44.27284  1.38405  0.02139 37.33238 \n residual sum-of-squares: 0.000484\n\nAlgorithm: multifit/levenberg-marquardt, (scaling: more, solver: qr)\n\nNumber of iterations to convergence: 6 \nAchieved convergence tolerance: 3.619e-09"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#check-fitting-results",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#check-fitting-results",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Check fitting results",
+    "text": "Check fitting results\n\nNow we can summarise and inspect the fitting results by using the summary() function\n\n\nsummary(fit)\n\n\nFormula: sqrtGR ~ CMTI(Temp, Tmax, Tmin, MUopt, Topt)\n\nParameters:\n       Estimate Std. Error t value Pr(&gt;|t|)    \nTmax  4.427e+01  6.121e-02 723.351   &lt;2e-16 ***\nTmin  1.384e+00  5.564e-01   2.488   0.0202 *  \nMUopt 2.139e-02  4.531e-04  47.211   &lt;2e-16 ***\nTopt  3.733e+01  3.157e-01 118.245   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.004491 on 24 degrees of freedom\n\nNumber of iterations to convergence: 6 \nAchieved convergence tolerance: 3.619e-09\n\n\n\nWe can extract the model coefficients using the coef() function\n\n\ncoefs &lt;- coef(fit)\ncoefs\n\n       Tmax        Tmin       MUopt        Topt \n44.27284300  1.38405426  0.02139205 37.33238243"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#parameters-confidence-intervals",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#parameters-confidence-intervals",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Parameters confidence intervals",
+    "text": "Parameters confidence intervals\n\nExtract the confidence intervals of the parameters using the confint() function\n\n\nconfint(fit)\n\n        2.5 %      97.5 %\n1 44.14652164 44.39916436\n2  0.23575472  2.53235380\n3  0.02045686  0.02232723\n4 36.68076914 37.98399571"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#plot-the-fitted-values",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#plot-the-fitted-values",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Plot the fitted values",
+    "text": "Plot the fitted values\n\nDefine a vector with auxiliary temperature data\n\n\nnew.temp=seq(0.7,44, by=0.2)\n\n\nUse the predict() function to compute the prediction interval\n\n\nfits &lt;- predict(fit,\n                newdata = data.frame(Temp=new.temp),\n                interval = \"prediction\", level = 0.95)\nstr(fits)\n\n num [1:217, 1:3] 0 0 0 0 0.000574 ...\n - attr(*, \"dimnames\")=List of 2\n  ..$ : NULL\n  ..$ : chr [1:3] \"fit\" \"lwr\" \"upr\"\n\n\n\nCheck the fits object\n\n\nhead(fits[, ])\n\n              fit          lwr         upr\n[1,] 0.0000000000 -0.009268608 0.009268608\n[2,] 0.0000000000 -0.009268608 0.009268608\n[3,] 0.0000000000 -0.009268608 0.009268608\n[4,] 0.0000000000 -0.009268608 0.009268608\n[5,] 0.0005735376 -0.008828908 0.009975983\n[6,] 0.0015625183 -0.007836776 0.010961813"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#plot-confidence-interval",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#plot-confidence-interval",
+    "title": "Fitting Secondary Growth Models",
+    "section": "Plot confidence interval",
+    "text": "Plot confidence interval\n\nCreate a plot of the original data with the fitted values superimposed\nPlot the observed data using the plot() function\nUse the lines() function to add the confidence interval\n\n\nplot(sqrtGR ~ Temp, data=df, ylim=c(0,.2))\nlines(new.temp, fits[, 1], col=\"blue\")\nlines(new.temp, fits[, 2], col=\"red\")\nlines(new.temp, fits[, 3], col=\"red\")"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#to-start",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#to-start",
+    "title": "Fitting Secondary Growth Models",
+    "section": "To start",
+    "text": "To start\nShiny app CardinalFit: https://ubarron.shinyapps.io/CardinalFit/"
+  },
+  {
+    "objectID": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#references",
+    "href": "slides/Unit1-ChallengeTestsDataAnalysisSGM.html#references",
+    "title": "Fitting Secondary Growth Models",
+    "section": "References",
+    "text": "References\n\n\nDolan, Kirk D., and Dharmendra K. Mishra. 2013. “Parameter Estimation in Food Science.” Annual Review of Food Science and Technology 4 (1): 401–22. https://doi.org/10.1146/annurev-food-022811-101247.\n\n\nGonzales-Barron, Ursula, and Vasco Cadavez. 2019. Handbook of Predictive Microbiology Growth Models Using R. Edited by Ursula Gonzales-Barron and Vasco Cadavez. Bragança, Portugal: Bringráfica Indústrias Gráficas, LDA.\n\n\nMcMeekin, T. A., J. Olley, T. Ross, and D. A. Ratkowsky. 1993. Predictive Microbiology: Theory and Application. Taunton, UK: Research Studies Press.\n\n\nRatkowsky, D A, R K Lowry, T A McMeekin, A N Stokes, and R E Chandler. 1983. “Model for Bacterial Culture Growth Rate Throughout the Entire Biokinetic Temperature Range.” Journal of Bacteriology 154 (3): 1222–26. https://jb.asm.org/content/154/3/1222.\n\n\nStephen A., Morse, and Meitzner Timothy A. 2012. “Medical Microbiology.” In, edited by G. Brooks, K. C. Carroll, J. Butel, and S. Morse, 26th Edition, 55–65. Jawetz, Melnick, & Adelberg’s. Mcgraw-hill. https://books.google.pt/books?id=UUSXV8B9i9sC."
   },
   {
     "objectID": "materials.html",
     "href": "materials.html",
     "title": "Course Materials",
     "section": "",
-    "text": "Datasets\nSlides\n\n\n\n Back to top"
+    "text": "Attaching package: 'xfun'\n\n\nThe following objects are masked from 'package:base':\n\n    attr, isFALSE",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "materials.html#statistical-examination-of-challenge-test-data-and-modelling",
+    "href": "materials.html#statistical-examination-of-challenge-test-data-and-modelling",
+    "title": "Course Materials",
+    "section": "Statistical examination of challenge test data and modelling",
+    "text": "Statistical examination of challenge test data and modelling\n\nSlides\n\n\nDownload Unit1-ChallengeTestsDataAnalysisIntroduction.html\n\n\n\n\nDownload Unit1-ChallengeTestsDataAnalysisPGM.html\n\n\n\n\nDownload Unit1-ChallengeTestsDataAnalysisSGM.html\n\n\n\n\nDatasets\n\n\nDownload ecoli.csv\n\n\n\n\nDownload listeria.csv\n\n\n\n\nDownload GrowthFull.csv\n\n\n\n\nDownload temp.csv\n\n\n\n\nScripts\n\n\nDownload Unit1-ChallengeTestsDataAnalysisPGM.R\n\n\n\n\nDownload Unit1-ChallengeTestsDataAnalysisSGM.R",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "materials.html#exploitation-of-challenge-testing-in-process-validation",
+    "href": "materials.html#exploitation-of-challenge-testing-in-process-validation",
+    "title": "Course Materials",
+    "section": "Exploitation of challenge testing in process validation",
+    "text": "Exploitation of challenge testing in process validation\n\nSlides\n\n\nDownload Unit2-ChallengeTestsThermalProcessValidation.pdf\n\n\n\n\nDatasets\n\n\nDownload Unit3-ExampleValidationSmoking.xls",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "materials.html#exploitation-of-challenge-testing-in-exposure-assessment-of-foodborne-pathogens",
+    "href": "materials.html#exploitation-of-challenge-testing-in-exposure-assessment-of-foodborne-pathogens",
+    "title": "Course Materials",
+    "section": "Exploitation of challenge testing in exposure assessment of foodborne pathogens",
+    "text": "Exploitation of challenge testing in exposure assessment of foodborne pathogens\n\nSlides\n\n\nDownload Unit3-ChallengeTestsQRA.pdf\n\n\n\n\nScripts\n\n\nDownload stirFry_Baseline.R\n\n\n\n\nDownload stirFry_MildHeat.R\n\n\n\n\nDownload stirFry_Storage.R",
+    "crumbs": [
+      "Materials"
+    ]
   },
   {
     "objectID": "schedule.html#schedule",
@@ -125,26 +473,6 @@
     "text": "HOW TO GET THERE?\n\nThe following bus companies travel Porto - Bragança - Porto.\n\nRede eXpressos (on line ticketing available: https://rede-expressos.pt/pt)\nRodoNorte (online schedules and fares: https://www.rodonorte.pt/pt/\nSantos (online schedules and fares: https://www.santosviagensturismo.pt/pt/)",
     "crumbs": [
       "Course location"
-    ]
-  },
-  {
-    "objectID": "index.html#virtual-attendance-is-now-possible",
-    "href": "index.html#virtual-attendance-is-now-possible",
-    "title": "e-SafeFoods Workshop",
-    "section": "VIRTUAL ATTENDANCE IS NOW POSSIBLE",
-    "text": "VIRTUAL ATTENDANCE IS NOW POSSIBLE\n\nThe Workshop Making the Most of Microbiological Challenge Test Data will take place in two modalities: physical attendance and virtual participation via ZOOM, on the \\(30^{th}\\) April 2024. The Workshop location is the School of Agriculture of the Polytechnic Institute of Bragança (Portugal), and is organised as a training event within the Erasmus+ Programme e-SafeFood project, whose main objective is to develop online training programmes on microbiological food risks with a strong practical component and certified at European level.\nMaking the Most of Microbiological Challenge Test Data is a free-of-charge three-hour workshop, but registration is required. Participants must indicate their participation modality.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#virtual-attendance-has-been-opened",
-    "href": "index.html#virtual-attendance-has-been-opened",
-    "title": "e-SafeFoods Workshop",
-    "section": "VIRTUAL ATTENDANCE HAS BEEN OPENED",
-    "text": "VIRTUAL ATTENDANCE HAS BEEN OPENED\n\n\nThe Workshop Making the Most of Microbiological Challenge Test Data will take place in two modalities: physical attendance and virtual participation via ZOOM, on the \\(30^{th}\\) April 2024. The Workshop location is the School of Agriculture of the Polytechnic Institute of Bragança (Portugal), and is organised as a training event within the Erasmus+ Programme e-SafeFood project, whose main objective is to develop online training programmes on microbiological food risks with a strong practical component and certified at European level.\nMaking the Most of Microbiological Challenge Test Data is a free-of-charge three-hour workshop, but registration is required. Participants must indicate their participation modality.",
-    "crumbs": [
-      "Home"
     ]
   }
 ]

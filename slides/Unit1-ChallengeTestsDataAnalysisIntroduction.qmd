@@ -1,0 +1,262 @@
+---
+title: "Introduction"
+subtitle: "Statistical Examination of Challenge Test Data and Modelling"
+date: "2024/04/30"
+author:
+  - name: Vasco Cadavez
+    affiliations:
+      - "[Polytechnic Institute of Bragança](https://www.ipb.pt/vcadavez/)"
+      - "[Mountain Research Center](https://cimo.ipb.pt)"
+
+  - name: Ursula Gonzales-Barron
+    affiliations:
+      - "[Polytechnic Institute of Bragança](https://www.ipb.pt/vcadavez/)"
+      - "[Mountain Research Center](https://cimo.ipb.pt/)"
+#footer:  "e-Safefoods"
+#logo: ./images/logo.png
+editor: source
+format: 
+  revealjs:
+    height: 1000
+    width: 1500
+    multiplex: true
+    theme: ["../css/esafefood.scss"]
+    slide-number: c/t
+    incremental: false
+    title-slide-attributes:
+      data-background-image: ../images/background_title.jpg
+      data-background-size: contain
+    transition: fade
+    toc: false
+    toc-depth: 2
+    toc-title: Contents
+    number-sections: false
+    number-depth: 2
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    embed-resources: true
+bibliography: ../files/esafefood.bib
+execute:
+  freeze: auto
+---
+
+## Class summary {background-image="../images/background.png" background-size="contain"}
+
+- **You will learn**:
+  - The goals of `predictive microbiology`
+  - The models `classification`
+  - The definition of `challenge test`
+  - How to carry out a `challenge test`
+  - How to `check` a data set from `challenge tests` using `R` software 
+  - How to `fit` a primary model using `R` software
+  - How to `fit` a secondary model using `R` software
+
+
+- **Materials needed**:
+  - This presentation
+  - Two `R` scripts
+    - `Unit1-ChallengeTestsDataAnalysisPGM.R`
+    - `Unit1-ChallengeTestsDataAnalysisSGM.R`
+  - The accompanying videos
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+# Predictive microbiology {background-image="../images/background.png" background-size="contain"}
+
+## Predictive microbiology objectives {background-image="../images/background.png" background-size="contain"}
+
+::: columns
+::: {.column width="60%"}
+- Aims the description of the `responses of microorganism's` to particular environmental conditions, such as:
+  - `Temperature`
+  - `pH`
+  - `Organic acids`
+  - `Water activity`
+  
+  
+- Based on `mathematical models` developed using `data collected at laboratory` level
+- `Software` is used to fit the models to experimental data in order to characterize the microbes responses
+:::
+
+::: {.column width="40%"}
+![](../images/growth.png){width="15cm"}
+:::
+:::
+
+::: {.notes}
+- `Temperature`: storage conditions and heat-treatment
+- `pH`: fermentations
+- `Organic acids`: preservatives (e.g. nitrite in pork meat)
+- `Water activity`:  bakery products
+:::
+
+# Models classification {background-image="../images/background.png" background-size="contain"}
+
+
+## Primary models {background-image="../images/background.png" background-size="contain"}
+
+::: {.columns}
+::: {.column width="60%"}
+
+- Describe the `microbial behaviour` as a function of `time`
+  - Growth
+  - Inactivation
+  - Survival
+- `Fit models` to experimental `data` to estimate the `kinetic parameters`
+  - $\lambda$: lag phase duration
+  - $k$: Maximum growth rate, or
+  - $\mu$: Specific growth rate 
+  - $M$: Maximum population density
+
+:::
+
+::: {.column width="40%"}
+![](../images/growth.png){width="15cm"}
+:::
+:::
+
+
+
+## Secondary models {background-image="../images/background.png" background-size="contain"}
+
+::: {.columns}
+::: {.column width="60%"}
+
+- Describe the `kinetic parameters` as a function of `environmental` conditions
+  - Temperature
+  - pH
+  - Water activity
+
+:::
+    
+::: {.column width="40%"}
+![](../images/ArrheniusLagTime.png){width="15cm"}
+:::
+:::
+
+
+## Tertiary models {background-image="../images/background.png" background-size="contain"}
+
+- Primary and secondary models are `integrated` in `software tools`
+- Used by
+  - `food safety assessors`
+  - `R&D managers` 
+  - `Quality managers`
+
+
+## Tertiary models {background-image="../images/background.png" background-size="contain"}
+
+
+### Examples: [https://fsqanalytics.github.io/predmicror/](https://fsqanalytics.github.io/predmicror/)
+
+![](../images/tertiary_predmicror.png){width="20cm"}
+
+::: {.notes}
+predmicror package from IPB
+Mos commonly used models for predictive microbiology
+:::
+
+
+## Tertiary models {background-image="../images/background.png" background-size="contain"}
+
+### Examples: [https://www.uco.es/investiga/grupos/hibro/en/microhibro](https://www.uco.es/investiga/grupos/hibro/en/microhibro)
+
+
+![](../images/tertiary_hibro.png){width="20cm"}
+
+::: {.notes}
+MicroHibro Spanish software from Cordoba University
+:::
+
+
+
+
+## Tertiary models {background-image="../images/background.png" background-size="contain"}
+
+### Examples: [https://symprevius.eu/en/](https://symprevius.eu/en/)
+
+![](../images/tertiary_symprevius.png){width="20cm"}
+
+::: {.notes}
+French software - Sym’Previus is a collaborative project
+:::
+
+# Challenge tests {background-image="../images/background.png" background-size="contain"}
+
+## Objectives {background-image="../images/background.png" background-size="contain"}
+
+- Study the `microbial growth potential`
+  - We assess `whether` or `not` the `food favours` the `growth` of microorganisms
+  - Compromise the `consumer health`
+  - Accelerate `food spoilage`
+
+- `Processes validation` by studying the degree of lethality against a target organism or group of target organisms.
+
+- Useful to determine the `potential shelf life of foods`.
+
+- The `food industry` use `challenge tests` to `improve the safety` and `quality` of its products.
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+
+## How to carry out a challenge test? {background-image="../images/background.png" background-size="contain"}
+
+- Food is `contaminated` and `analysed` in the `environmental conditions` in which it is normally `produced`, `distributed`, `stored` and `marketed`
+
+- `Inoculation` should be carried out at the `most critical stages of processing`
+
+- We `can't carry out` these tests on `production lines`
+
+- So we need `laboratorial experiments`
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+## How to carry out a challenge test? {background-image="../images/background.png" background-size="contain"}
+
+### `Examples`
+
+![](../images/beef_challenge.png){width="20cm"}
+
+::: {.notes}
+Listeria in beef
+:::
+
+
+## How to carry out a challenge test? {background-image="../images/background.png" background-size="contain"}
+
+### `Examples`
+
+![](../images/cheese_challenge.png){width="20cm"}
+
+::: {.notes}
+S. aureus in cheese
+:::
+
+
+## How to carry out a challenge test? {background-image="../images/background.png" background-size="contain"}
+
+### `Examples`
+
+![](../images/alheira_challenge.png){width="20cm"}
+
+::: {.notes}
+S. aureus in cheese
+:::
+
+
+## References {background-image="../images/background.png" background-size="contain"}
+
+---
+nocite: |
+  @Barron2019-handbook, @McMeekin1993book, @Zwietering1990, @Baranyi1993Modelling, @Whiting1993, @ISO20976-1-2019, @ISO20976-2-2019
+---
+
+::: {#refs}
+:::

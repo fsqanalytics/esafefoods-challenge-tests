@@ -1,0 +1,330 @@
+---
+title: "Fitting Primary Growth Models"
+subtitle: "Statistical Examination of Challenge Test Data and Modelling"
+date: "2024/04/30"
+author:
+  - name: Vasco Cadavez
+    affiliations:
+      - "[Polytechnic Institute of Bragança](https://www.ipb.pt/vcadavez/)"
+      - "[Mountain Research Center](https://cimo.ipb.pt)"
+
+  - name: Ursula Gonzales-Barron
+    affiliations:
+      - "[Polytechnic Institute of Bragança](https://www.ipb.pt/vcadavez/)"
+      - "[Mountain Research Center](https://cimo.ipb.pt/)"
+#footer:  "e-Safefoods"
+#logo: ./images/logo.png
+editor: source
+format: 
+  revealjs:
+    height: 1000
+    width: 1500
+    multiplex: true
+    theme: ["../css/esafefood.scss"]
+    slide-number: c/t
+    incremental: false
+    title-slide-attributes:
+      data-background-image: ../images/background_title.jpg
+      data-background-size: contain
+    transition: fade
+    toc: false
+    toc-depth: 1
+    toc-title: Contents
+    number-sections: false
+    number-depth: 1
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    embed-resources: true
+bibliography: ../files/esafefood.bib
+execute:
+  freeze: auto
+---
+
+## Objectives {background-image="../images/background.png" background-size="contain"}
+
+- **You will learn** how to:
+  - `Import` a `.csv` file to `R` software 
+  - `Check` a challenge test data set  
+  - `Select` an adequate `primary growth model`
+  - `Fit` a primary growth model to
+  - `Examine` the `fitting results`
+  - `Obtain` the `confidence` and `prediction` intervals
+
+- **Materials needed**:
+  - This presentation
+  - The `R` script: `Unit1-ChallengeTestsDataAnalysisPGM.R`
+  - The accompanying video
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+# Data {background-image="../images/background.png" background-size="contain"}
+
+## Challege test data {background-image="../images/background.png" background-size="contain"}
+
+- Growth data example
+  - *E. coli* `challenge test`
+    - data set: `ecoli.csv`
+    - `Experiments` were carried out at `30` and `35` $^o$C
+    - Two batches/repetitions per `condition`
+
+- First, we load the data set using the `read.csv()` function
+
+```{r df, echo=TRUE, eval=TRUE}
+df <- read.csv("../data/ecoli.csv", sep=";", header=TRUE)
+```
+
+- Lets check the first lines of the file, for that use the `head()` function
+
+```{r df1, echo=TRUE, eval=TRUE}
+head(df)
+```
+
+::: {.notes}
+`Condition` is this case is temperature at which trials were conducted
+:::
+
+## Challege test data {background-image="../images/background.png" background-size="contain"}
+
+- Check the structure of the data set using the `str()` function
+- We can always make sure that we have the right data set
+
+```{r checkstr, echo=TRUE, eval=FALSE}
+str(df)
+```
+
+- The data set has 42 `observations` (lines) and 5 `variables`(columns)
+
+```{r checkstr1, echo=FALSE, eval=TRUE}
+str(df)
+```
+
+
+::: {.notes}
+Variables type:
+- int
+- num
+:::
+
+## Check the data structure {background-image="../images/background.png" background-size="contain"}
+
+- Check the levels of the variables: `Condition` and `Temp`
+- Use the `table()` function
+
+### Condition
+
+```{r checkcond}
+table(df$Condition)
+```
+
+### Temperature
+
+```{r checktemp}
+table(df$Temp)
+```
+
+### Interaction `Condition`/`Temp` 
+
+
+```{r checkcros}
+table(df$Condition, df$Temp)
+```
+
+::: {.notes}
+Condition and temperature are the same!
+Because we just have one factor: Temperature
+:::
+
+## Check the data shape {background-image="../images/background.png" background-size="contain"}
+
+- Plot `lnN` against `Time`
+
+```{r plot, echo=TRUE, eval=FALSE}
+library(ggplot2)
+ggplot(data = df, aes(x=Time, y=lnN, group=factor(Temp), colour=factor(Temp))) +
+  geom_point()
+```
+
+::: {.notes}
+
+lnN is the bacterial counts in natural logarithm scale
+:::
+
+## Check the data shape {background-image="../images/background.png" background-size="contain"}
+
+```{r plot2, echo=FALSE, eval=TRUE, out.width="25%"}
+library(ggplot2)
+ggplot(data = df, aes(x=Time, 
+                      y=lnN, 
+                      group=factor(Temp), 
+                      colour=factor(Temp))) +
+  geom_point()
+```
+
+- The *E. coli* population (`lnN`) increases along `Time`
+- Clearly, the `lnN` shows a non-linear (`sigmoidal`) relationship with `Time`
+
+
+# Primary growth models {background-image="images/background.png" background-size="contain"}
+
+## Primary growth models {background-image="images/background.png" background-size="contain"}
+
+- Describe the `microorganisms responses` to the `food environments`
+
+- We can predict the `growth behaviour` of the microorganisms for `specific environmental conditions`, such as: pH, salt content, temperature, etc.
+
+- `Primary growth models` are characterised by the `kinetic growth parameters`
+  - $\lambda$: lag phase duration
+  - $k$: Maximum growth rate, or
+  - $\mu$: Specific growth rate 
+  - $M$: Maximum population density
+
+::: {.notes}
+- These parameters are essential to predict growth behaviour
+:::
+
+
+
+## Primary growth models {background-image="images/background.png" background-size="contain"}
+
+-   Several `primary growth models` have been developed and tested for predictive microbiology applications
+    - Baranyi: [https://fsqanalytics.github.io/predmicror/reference/BaranyiFM.html](https://fsqanalytics.github.io/predmicror/reference/BaranyiFM.html)
+    - Huang: [https://fsqanalytics.github.io/predmicror/reference/HuangFM.html](https://fsqanalytics.github.io/predmicror/reference/HuangFM.html)
+    - Rosso: [https://fsqanalytics.github.io/predmicror/reference/RossoFM.html](https://fsqanalytics.github.io/predmicror/reference/RossoFM.html)
+    
+
+::: {.notes}
+
+predmicror package is a collection of functions used in predictive microbiology
+- full growth models
+- no-lag growth models
+
+:::
+    
+# Model fitting tools {background-image="../images/background.png" background-size="contain"}
+
+## Software {background-image="../images/background.png" background-size="contain"}
+
+- We use the `R` software
+  - Its `free`
+  - Developed for `statistical analysis` and `plots`
+  - Functions to `fit non-linear models` to experimental data
+    - `nls()` function from `the```stats` package
+    - `gsl_nls()` from `gslnls` package (`GNU Scientific Library`)
+    - Others
+ 
+- Download and install the `R` software: [https://cran.r-project.org/](https://cran.r-project.org/)
+- Install the `predmicror` package: [https://fsqanalytics.github.io/predmicror/](https://fsqanalytics.github.io/predmicror/)
+
+```{r inst, echo=TRUE, eval=FALSE}
+devtools::install_github("fsqanalytics/predmicror")
+```
+
+
+# Primary growth model {background-image="../images/background.png" background-size="contain"}
+
+## Selected model: Huang full model {background-image="../images/background.png" background-size="contain"}
+
+- The `Huang full growth model` might be a good option to describe the `sigmoidal` shape of the data
+  - [https://fsqanalytics.github.io/predmicror/reference/HuangFM.html](https://fsqanalytics.github.io/predmicror/reference/HuangFM.html)
+  
+- Model equation 
+
+
+$$Y = Y_0 +Y_{max} -log \left( e^{Y_0}+(e^{Y_{max}}-e^{Y_0}) \times e^{-mu \times B} \right)$$
+
+# Fitting procedure {background-image="../images/background.png" background-size="contain"}
+
+## Starting values {background-image="../images/background.png" background-size="contain"}
+
+- To fit `non-linear models` we need to we need to supply `starting values` for the model parameters
+- So, lets start by defining the starting values
+
+```{r start, echo=TRUE, eval=TRUE}
+start.values = list(Y0=0.0, Ymax=22.0, MUmax=1.7, lag=5.0) 
+```
+
+## Fit using gsl_nls() function {background-image="../images/background.png" background-size="contain"}
+
+- Now we can fit the `Huang` model to the experimental data
+- Lets start with data from the `Condition 1` & `Repetition 1`
+
+```{r fit, echo=TRUE, eval=TRUE}
+library(predmicror)
+library(gslnls)
+fit <- gsl_nls(lnN ~ HuangFM(Time, Y0, Ymax, MUmax, lag),
+               data=df[df$Condition==1 & df$Repetition==1, ],
+               start =  start.values
+               )
+fit
+```
+
+## Check fitting results {background-image="../images/background.png" background-size="contain"}
+
+- The fitting was `successful`!
+- For a detailed summary of the model fit we can use the `summary()` function
+
+```{r sums, echo=TRUE, eval=TRUE}
+summary(fit)
+```
+
+## Parameters confidence intervals {background-image="../images/background.png" background-size="contain"}
+
+- Extract the confidence intervals of the parameters using the `confint()` function
+
+```{r cfi, echo=TRUE, eval=TRUE}
+confint(fit)
+```
+
+
+## Plot the fitted values {background-image="../images/background.png" background-size="contain"}
+
+- Define a vector with auxiliary time data
+
+```{r pred1, echo=TRUE, eval=TRUE}
+new.times=seq(0,24, by=0.1)
+```
+
+- Use the `predict()` function to compute the prediction interval
+
+```{r pred2, echo=TRUE, eval=TRUE}
+fits <- predict(fit,
+                newdata = data.frame(Time=new.times),
+                interval = "prediction", level = 0.95)
+str(fits)
+```
+
+- Check the `fits` object
+
+```{r checkfits, echo=TRUE, eval=TRUE}
+head(fits[, ])
+```
+
+## Plot confidence interval {background-image="../images/background.png" background-size="contain"}
+
+-   Create a plot of the original data with the fitted values superimposed
+-   Plot the observed data using the `plot()` function
+-   Use the `lines()` function to add the confidence interval
+
+```{r plotPred, echo=TRUE, eval=TRUE}
+plot(lnN ~ Time, data=df[df$Condition==1 & df$Repetition==1, ], ylim=c(5,20))
+lines(new.times, fits[, 1], col="blue")
+lines(new.times, fits[, 2], col="red")
+lines(new.times, fits[, 3], col="red")
+```
+
+## To start {background-image="../images/background.png" background-size="contain"}
+
+Shiny app PredMicro: [https://vcadavez.shinyapps.io/PredMicro/](https://vcadavez.shinyapps.io/PredMicro/)
+
+## References {background-image="../images/background.png" background-size="contain"}
+
+---
+nocite: |
+  @Dolan2013, @Barron2019-handbook, @Buchanan1997, @Zwietering1990, @Baranyi1993Modelling
+---
+
+::: {#refs}
+:::

@@ -1,0 +1,278 @@
+---
+title: "Fitting Secondary Growth Models"
+subtitle: "Statistical Examination of Challenge Test Data and Modelling"
+date: "2024/04/30"
+author:
+  - name: Vasco Cadavez
+    affiliations:
+      - "[Polytechnic Institute of Bragança](https://www.ipb.pt/vcadavez/)"
+      - "[Mountain Research Center](https://cimo.ipb.pt)"
+
+  - name: Ursula Gonzales-Barron
+    affiliations:
+      - "[Polytechnic Institute of Bragança](https://www.ipb.pt/vcadavez/)"
+      - "[Mountain Research Center](https://cimo.ipb.pt/)"
+#footer:  "eSafefood"
+#logo: images/logo.png
+editor: source
+format: 
+  revealjs:
+    height: 1000
+    width: 1500
+    multiplex: true
+    theme: ["../css/esafefood.scss"]
+    slide-number: c/t
+    incremental: false
+    title-slide-attributes:
+      data-background-image: ../images/background_title.jpg
+      data-background-size: contain
+    transition: fade
+    toc: false
+    toc-depth: 1
+    toc-title: Contents
+    number-sections: false
+    number-depth: 1
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    embed-resources: true
+bibliography: ../files/esafefood.bib
+execute:
+  freeze: auto
+---
+
+## Objectives {background-image="../images/background.png" background-size="contain"}
+
+- **You will learn** how to:
+  - `Import` a `.csv` file to `R` software 
+  - `Check` a data set  
+  - `Select` an adequate `secondary model`
+  - `Fit` a secondary model
+  - `Examine` the `fitting results`
+  - `Obtain` the `confidence` and `prediction` intervals
+
+- **Materials needed**:
+  - This presentation
+  - The `R` script: `Unit1-ChallengeTestsDataAnalysisSGM.R`
+  - The accompanying video
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+
+# Data {background-image="../images/background.png" background-size="contain"}
+
+## Data {background-image="../images/background.png" background-size="contain"}
+
+- `Growth rate` values of salmonella in broth
+- The [`listeria.csv`](../data/listeria.csv) file has three columns (`Temp`, `GR`  `sqrtGR`) and 29 observations
+  - `Temp` is the temperature used to measure the growth rate
+  - `GR` is the growth rate
+  - `sqrtGR` is the square root of the growth rate
+
+- Lets read the `listeria.csv` with the `read.csv()` function and save it as data frame (`df`)
+
+```{r df, echo=TRUE}
+df <- read.csv("../data/listeria.csv", sep=";", header=TRUE)
+head(df)
+```
+
+::: {.notes}
+Data were obtained by fitting a `primary model` to different `isothermal` experiments
+:::
+
+## Data {background-image="../images/background.png" background-size="contain"}
+
+- Lets, check the dataset using the structure (`str()`) function
+
+```{r df1, echo=TRUE}
+str(df)
+```
+
+- We confirm that the data set is composed of 3 variables (columns)
+  - `Temp`: temperature
+  - `GR`: growth rate
+  - `sqrtGR`: square root of the growth rate
+
+## Check the data shape {background-image="../images/background.png" background-size="contain"}
+
+- Check the data by plotting the `sqrtGR` against `Temperature`
+  - We can observe a non-linear relationship
+
+::: {.columns}
+::: {.column}
+```{r gr, echo=TRUE}
+plot(GR ~ Temp, data=df,
+     xlab="Temperature (ºC)", ylab="Growth rate")
+```
+:::
+
+::: {.column}
+```{r sqrtgr, echo=TRUE}
+plot(sqrtGR ~ Temp, data=df,
+     xlab="Temperature (ºC)", ylab="Growth rate")
+```
+:::
+:::
+
+
+# Secondary models {background-image="../images/background.png" background-size="contain"}
+
+## Secondary models {background-image="../images/background.png" background-size="contain"}
+
+- Describe the influence of `environmental factors` on microbial `growth rate`
+- Can be generally classified as:
+  - Arrhenius-type models
+  - Belehradek-type models
+  - Square-root models
+  - Cardinal parameter models
+
+- When adjusting a `secondary model`, using directly the `untransformed growth rate` response variable produces `heterocedastic` models
+- To obtain an `adequate fitting`, the `growth rate` values are often `transformed` by taking the `natural logarithm` or the `square root`
+
+::: {.notes}
+natural logarithm - in polynomial models
+
+square root - in Belehradek-type models
+:::
+
+
+# Model fitting tools {background-image="../images/background.png" background-size="contain"}
+
+## Software {background-image="../images/background.png" background-size="contain"}
+
+- We use the `R` software
+  - Its `free`
+  - Developed for `statistical analysis` and `plots`
+  - Functions to `fit non-linear models` to experimental data
+    - `nls()` function from `the```stats` package
+    - `gsl_nls()` from `gslnls` package (`GNU Scientific Library`)
+    - Others
+ 
+- Download and install the `R` software: [https://cran.r-project.org/](https://cran.r-project.org/)
+- Install the `predmicror` package: [https://fsqanalytics.github.io/predmicror/](https://fsqanalytics.github.io/predmicror/)
+
+## Software {background-image="../images/background.png" background-size="contain"}
+
+- Install the `predmicror` package from GitHub repository
+
+```{r inst1, echo=TRUE, eval=FALSE}
+devtools::install_github("fsqanalytics/predmicror")
+```
+
+- Load the `predmicror` package
+
+```{r predmicror, echo=TRUE, eval=FALSE}
+library(predmicror)
+```
+
+# Secondary growth model {background-image="../images/background.png" background-size="contain"}
+
+## Selected model: Cardinal model for temperature {background-image="../images/background.png" background-size="contain"}
+
+- We will use the `Cardinal model for temperature` implemented in the `predmicror` package
+  - [https://fsqanalytics.github.io/predmicror/reference/CMTI.html](https://fsqanalytics.github.io/predmicror/reference/CMTI.html)
+
+```{r func, echo=TRUE}
+library(predmicror)
+CMTI
+```
+
+# Fitting procedure {background-image="../images/background.png" background-size="contain"}
+
+## Starting values {background-image="../images/background.png" background-size="contain"}
+
+- To fit `non-linear models` we need to we need to supply `starting values` for the model parameters
+- So, lets start by defining the starting values
+
+```{r start, echo=TRUE, eval=TRUE}
+start.values = list(Tmax=47, Tmin=0.1, MUopt=0.020, Topt=37)
+```
+
+## Fit using gsl_nls() function {background-image="../images/background.png" background-size="contain"}
+
+- Now we can fit the `CMTI` model to the experimental data
+
+```{r fit, echo=TRUE, eval=TRUE}
+library(predmicror)
+library(gslnls)
+fit <- gsl_nls(sqrtGR ~ CMTI(Temp,Tmax,Tmin,MUopt,Topt),
+           data=df,
+           start =  start.values
+           )
+fit
+```
+
+## Check fitting results {background-image="../images/background.png" background-size="contain"}
+
+- Now we can summarise and inspect the fitting results by using the `summary()` function
+
+```{r sums, echo=TRUE}
+summary(fit)
+```
+
+- We can extract the model coefficients using the `coef()` function
+
+```{r coef, echo=TRUE}
+coefs <- coef(fit)
+coefs
+```
+
+## Parameters confidence intervals {background-image="../images/background.png" background-size="contain"}
+
+- Extract the confidence intervals of the parameters using the `confint()` function
+
+```{r cfi, echo=TRUE, eval=TRUE}
+confint(fit)
+```
+
+## Plot the fitted values {background-image="../images/background.png" background-size="contain"}
+
+- Define a vector with auxiliary temperature data
+
+```{r pred1, echo=TRUE, eval=TRUE}
+new.temp=seq(0.7,44, by=0.2)
+```
+
+- Use the `predict()` function to compute the prediction interval
+
+```{r pred2, echo=TRUE, eval=TRUE}
+fits <- predict(fit,
+                newdata = data.frame(Temp=new.temp),
+                interval = "prediction", level = 0.95)
+str(fits)
+```
+
+- Check the `fits` object
+
+```{r checkfits, echo=TRUE, eval=TRUE}
+head(fits[, ])
+```
+
+## Plot confidence interval {background-image="../images/background.png" background-size="contain"}
+
+-   Create a plot of the original data with the fitted values superimposed
+-   Plot the observed data using the `plot()` function
+-   Use the `lines()` function to add the confidence interval
+
+```{r plotPred, echo=TRUE, eval=TRUE}
+plot(sqrtGR ~ Temp, data=df, ylim=c(0,.2))
+lines(new.temp, fits[, 1], col="blue")
+lines(new.temp, fits[, 2], col="red")
+lines(new.temp, fits[, 3], col="red")
+```
+
+## To start {background-image="../images/background.png" background-size="contain"}
+
+Shiny app CardinalFit: [https://ubarron.shinyapps.io/CardinalFit/](https://ubarron.shinyapps.io/CardinalFit/)
+
+## References {background-image="../images/background.png" background-size="contain"}
+
+---
+nocite: |
+  @brooks2012jawetz, @Ratkowsky1983, @McMeekin1993book, @Dolan2013, @Barron2019-handbook
+---
+
+::: {#refs}
+:::

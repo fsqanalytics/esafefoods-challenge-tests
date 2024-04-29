@@ -6,10 +6,11 @@ page-layout: full
 
 |                        |
 |------------------------|
-| ![](images/banner.jpg) |
+| ![](./images/banner.jpg) |
 
 ___________________________
-## [VIRTUAL ATTENDANCE HAS BEEN OPENED]{style="color:red"}
+<!-- ## [VIRTUAL ATTENDANCE HAS BEEN OPENED]{style="color:red"} -->
+## [REGISTRATION IS CLOSED]{style="color:red"}
 __________________________
 
 <br>

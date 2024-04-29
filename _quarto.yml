@@ -27,11 +27,9 @@ website:
         text: "Course location"
       - href: registration.qmd
         text: Registration
-      # - section: "Materials"
-      #   contents:
-      #   - slides/vcadavez.qmd
-      #   - slides/mzanzan.qmd
-      #   - slides/ubarron.qmd
+      - href: materials.qmd
+        text: Materials
+       
       # - href: https://github.com/fsqanalytics/esafefoods-challenge-tests
       #   text: Forum
   page-footer:

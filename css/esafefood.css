@@ -1,0 +1,226 @@
+/* Slide background */
+slides > slide {
+  background: linear-gradient(#99a5b9, #abb5c5);
+  background-color: grey;
+}
+
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto:light&display=swap');
+
+body {
+  background-image: url("../images/background.png");
+  background-size: 70% 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This is what makes the background seem to be staying in the same position */
+ }
+
+.title-slide hgroup {
+  bottom: 100px;
+}
+
+/* Title slide title */
+.title-slide hgroup h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  font-weight: 250;
+  line-height: 1;
+  letter-spacing: -3px;
+  color: #2e83f2;
+  position: relative;
+  left: -6px;
+}
+
+/* Title slide subtitle */
+.title-slide hgroup h2 {
+  font-family: Roboto, sans-serif;
+  font-size:50px;
+  color: #2e83f2;
+  font-weight: inherit;
+}
+
+/* Title slide paragraph */
+.title-slide hgroup p {
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  font-weight: 250;
+  color: #2e83f2;
+  line-height: 1.3;
+  margin-top: 2em;
+}
+
+/* Paragraph text */
+p {
+  font-family: "Open sans", Serif;
+  color: #003669;
+  font-size: 18px;
+  font-weight: 350;
+}
+
+/* Unordered lists */
+
+ul {
+  font-family: "Open sans", sans-serif;
+  color: #003669;
+    font-size: 15px;
+  font-weight: 350;
+}
+
+/* Ordered lists */
+
+li {
+  font-family: "Open sans", sans-serif;
+  color: #0c1b63;
+  font-size: 15px;
+  font-weight: 350;
+}
+
+/* Background colour for code blocks */
+.prettyprint {
+  background-color: #0ebff0;
+}
+
+
+/*Adjust syntax highlighting */
+
+.prettyprint .str {
+  color: darkgreen;
+}
+
+.prettyprint .pln {
+  color: steelblue;
+}
+
+.prettyprint .pun {
+  color: DarkSlateBlue;
+}
+
+.prettyprint .lit {
+  color: #7f0000;
+}
+
+/* Headers */
+
+h1 {
+  font-family: Roboto, sans-serif;
+  color: #2e83f2;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 30px;
+}
+
+h2 {
+  font-family: Roboto, sans-serif;
+  color: #2e83f2;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+h3 {
+  font-family: Roboto, sans-serif;
+  color: #0c6343;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+/* Hyperlinks */
+a {
+  color: darkblue;
+  text-decoration: none;
+  border-bottom: 1px solid darkblue;
+}
+
+a:hover {
+  color: black !important;
+    border-bottom: 1px solid black;
+}
+
+
+/* Footnotes */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.6em;
+}
+
+.footer p {
+    color: #003669;
+    font-size: 18px;
+}
+
+.footer li {
+    font-family: "open sans", sans-serif;
+    color: #003669;
+    font-size: 18px;
+} 
+
+/* Table formatting */
+
+/* Table header */
+table.rmdtable th {
+  color: white;
+  font-size: 18px;
+  background: #5D697D;
+}
+
+/* Table odd rows */
+table.rmdtable tr:nth-child(odd) {
+  background: #f2f4f8;
+  color: #003669;
+}
+
+/* Table even rows */
+table.rmdtable tr:nth-child(even) {
+  background: #e0e5ea;
+  color: #003669;
+}
+
+/* Table first column
+* NB change font-weight: to "normal" to stop the first column being bold
+*/
+table.rmdtable tr > td:first-child, table th {
+  font-weight: 600;
+  color: #003669;
+}
+
+
+/* Format for top level title slides inserted into the deck */
+
+/* This controls the appearance of the title text, which is rendered as H2 even though you specify H1 to generate the slide */
+
+.auto-fadein h2{
+  font-family: Roboto, sans-serif;
+  color: #3399ff;
+  font-weight: 200;
+  font-size: 100px;
+  line-height: 1.1;
+  position: relative;
+  left: -6px;
+
+}
+
+
+/* This controls the slide background for top level title slides*/
+
+slides > slide.dark {
+  background: linear-gradient(#99a5b9, #abb5c5) !important;
+}
+
+/* Non-R code blocks */
+pre {
+    background: #FFFFFF;
+    color: #6c7e9c;
+}
+
+
+/* This keeps images in columns sized correctly */
+img { 
+  max-width:100%; 
+  height: auto; 
+}
