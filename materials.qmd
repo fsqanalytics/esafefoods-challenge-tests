@@ -7,7 +7,8 @@ title: "Course Materials"
 ---------------------
 
 ```{r xfun, echo=FALSE, warning=FALSE}
-library(xfun)
+knitr::opts_chunk$set(package.startup.message = FALSE)
+xfun::pkg_attach()
 ```
 
 
